@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="resta.css">
+    <link rel="icon" href="/media/favicon.ico">
+</head>
+    <title>PALM SHORE</title>
+    <style>
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  color: #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+    margin:auto;
+    margin-top:10px;
+  width: 90%;
+  height:90%;
+  padding-top:10px;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  transform:rotateY(180deg);
+}
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+.thefront p, .theback p{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <header>
+           <a href="index.html" id="logo"><h2><i class="fa-solid fa-bowl-rice"></i>NATIVE SHORE</h2></a>
+           <nav>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="#locheading"><i class="fa-solid fa-location-pin"></i>Locations</a>
+             <a href="yt.html">YT</a>
+           </nav>
+        </header>
+        <div class="maintext">
+            <div class="tagline1">
+               Finest Treat for Your Taste Buds.<br>
+               SUDA SUDA!
+            </div><br>
+            <div class="tagline2">
+                Fastest Delivery
+            </div><br>
+            <div class="callus">
+                Call us @+91 xxxxxxxxxx         
+            </div><br>
+            <button style="cursor: pointer;">Order Online</button>
+            <br>
+            <br>
+            <div>
+                <label for="menu" style="background-color: #53BF9D;border-radius: 10px;padding:10px;height:20px;width:30px;">MENU</label>
+                <select name="menuit" id="menu" style="height:50px" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                    <option value="#start" >STARTERS</option>
+                    <option value="#maincourse">MAINCOURSE</option>
+                    <option value="#desserts">DESSERTS</option>
+                    <option value="#northindian" selected>NORTH-INDIAN</option>
+                    <option value="#rices">RICES</option>
+                </select>
+            </div>
+                
+
+             <div style="text-align: right;">
+                <h1 style="color: aqua;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">IF U R A GAMER CLICK HERE!</h1>
+            <a href="game.html"><button style="cursor:grab;font-size: 15px;">GAMERS CLICK HERE!</button></a>
+             </div>
+            </div>
+            <div class="offer">
+                <marquee>90% OFFER ON 1ST ORDER!</marquee>
+        
+            </div>
+    </div>
+
+    
+
+    <h2 id="menuheading">Menu</h2>
+    <div id="start" style="height:50px">STARTERS</div>
+    <div class="starters">
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="panner tikka2.jpg" class="img">
+            <br>
+            <h2>PANNER TIKKA</h2>
+            </div>
+            <div class="theback">
+                <p  class="p2">Paneer tikka or Paneer Soola or Chhena Soola is an Indian dish made from chunks of paneer/ chhena marinated in spices and grilled in a tandoor. It is a vegetarian alternative to chicken tikka and other meat dishes. </p>
+            <h3>&#8377 80</h3>
+            <input type="button" value="ORDER" onclick="msg()">
+            </div>
+            <br>
+            </div>
+        </div>
+        <br>
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="chilli gobi.jpg" class="img">
+            <br>
+            <h2>CHILLI GOBI</h2>
+                </div>
+            <div class="theback">
+                <p class="p2">Chilli gobi recipe with step by step pictures. Absolutely delicious is this restaurant style chilli gobi recipe from the Indo Chinese cuisine. You just cannot stop eating these crispy and spicy cauliflower florets. This cauliflower chilli makes an awesome starter or snack at family dinners or get-togethers.</p>
+            <h3>&#8377 80</h3>
+            <input type="button" value="ORDER">
+            </div>
+            <br>
+        </div>
+        </div>
+        <br>
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="gobi 65.jpg" class="img">
+            <br>
+            <h2>GOBI 65</h2>
+                </div>
+            <div class="theback">
+                <p class="p2">Spicy and crispy Gobi 65 recipe is a fried cauliflower appetizer or snack that everyone will love! It’s vegan, and simple to make with my step-by-step photos and recipe. Crunchy and savory Cauliflower 65 is perfect to serve with tomato ketchup, red chili sauce, chutneys, or your favorite condiment to dip.                </p>
+            <h3>&#8377 80</h3>
+            <input type="button" value="ORDER">
+            </div>
+            <br>
+        </div>
+        </div>
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="mulaga bajji.jpg" class="img">
+            <br>
+            <h2>MULAGA BAJJI</h2>
+                </div>
+            <div class="theback">
+                <p class="p2">This is one of those recipes in which, you will be able to enjoy chillies without their spiciness. Thus, this Mirchi Bajji is also a popular one at my home and I make it on many occasions. Since, there’s no heat from the chilies in this recipe, it is liked by one and all.</p>
+            <h3>&#8377 30</h3>
+            <input type="button" value="ORDER">
+            </div>
+            <br>
+        </div>
+        </div>
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="veg pakoda.jpg" class="img">
+            <br>
+            <h2>VEG PAKODA</h2>
+                </div>
+            <div class="theback">
+                <p class="p2">Make crispy and tasty mixed Vegetable pakora recipe with my easy step-by-step photo guide. Easy to customize with your favorite vegetables, this veg pakora has a crispy, crunchy exterior with a soft interior. The recipe is naturally vegan and can be made gluten-free.</p>
+            <h3>&#8377 30</h3>
+            <input type="button" value="ORDER">
+            </div>
+            <br>
+        </div>
+        </div>
+        
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="Bonda.jpg" class="img">
+            <br>
+            <h2>BONDA</h2>
+                </div>
+            <div class="theback">
+                <p class="p2">These are like soft and spongy fritters made with all purpose flour, spices and herbs. Since all-purpose flour or maida is one of the primary ingredients in these bajjis, these are also called Maida Bonda. This recipe of mine is vegan and with it, you can make these scrumptious bondas easily at home.</p>
+            <h3>&#8377 30</h3>
+            <input type="button" value="ORDER">
+            </div>
+            <br>
+        </div>
+        </div>
+        <div class="contain">
+            <div class="thecard">
+                <div class="thefront">
+            <img src="tomatosoup.jpg" class="img">
+            <br>
+            <h2>TOMATO SOUP</h2>
+                </div>
+            <div class="theback">
+                <p class="p2"> This delicious soup is one of the many ways to use the bright red tomato produce at our homes. This homestyle Cream of Tomato Soup is smooth, tangy and oh so creamy, without any cream added!</p>
+            <h3>&#8377 30</h3>
+            <input type="button" value="ORDER">
+            </div>
+            <br>
+        </div>
+        </div>
+    </div>
+    <br>
+    <div id="maincourse" style="height:50px;">MAINCOURSE</div>
+    <div class="mainitems">
+        <div class="maincontain">
+            <img src="Idli.png" class="img">
+            <br>
+            <h2>IDLI</h2>
+            <h3>&#8377 20</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="Dosa.png" class="img">
+            <br>
+            <h2>DOSA</h2>
+            <h3>&#8377 38</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="chapatti.jpg" class="img">
+            <br>
+            <h2>CHAPATTI</h2>
+            <h3>&#8377 60</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="pongal.png" class="img">
+            <br>
+            <h2>PONGAL</h2>
+            <h3>&#8377 40</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="poori.jpg" class="img">
+            <br>
+            <h2>POORI</h2>
+            <h3>&#8377 20</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="Upma.jpg" class="img">
+            <br>
+            <h2>UPMA</h2>
+            <h3>&#8377 40</h3>
+            <input type="button" value="ORDER">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="both">
+    <div id="northindian">
+        <h1>NORTH-INDIAN</h1>
+        <div class="maincontain">
+            <img src="panner butter.jpg" class="img">
+            <br>
+            <h2>PANNER BUTTER MASALA</h2>
+            <h3>&#8377 100</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="Butter-Naan.jpg" class="img">
+            <br>
+            <h2>BUTTER-NAAN</h2>
+            <h3>&#8377 60</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="palak panner.jpg" class="img">
+            <br>
+            <h2>BUTTER-NAAN</h2>
+            <h3>&#8377 60</h3>
+            <input type="button" value="ORDER">
+        </div>
+    </div>
+    <div id="rices">
+        <h1>RICES</h1>
+        <div class="maincontain">
+            <img src="chickenbiriyani.jpg" class="img">
+            <br>
+            <h2>CHICKEN BIRIYANI</h2>
+            <h3>&#8377 120</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="Muttonbiriyani.jpg" class="img">
+            <br>
+            <h2>MUTTON BIRIYANI</h2>
+            <h3>&#8377 140</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="sezwanrice.jpg" class="img">
+            <br>
+            <h2>SEZWAN FRIED RICE</h2>
+            <h3>&#8377 100</h3>
+            <input type="button" value="ORDER">
+        </div>
+        <div class="maincontain">
+            <img src="vegfriedrice.jpg" class="img">
+            <br>
+            <h2>VEG FRIED RICE</h2>
+            <h3>&#8377 100</h3>
+            <input type="button" value="ORDER">
+        </div>
+    </div>
+    </div>
+    <div id="desserts" style="text-align: center;">
+        <H1>DESSERTS</H1>
+        <div class="detcontain">
+            <div class="maincontain">
+                <img src="fruitsaladice.jpeg" class="img">
+                <br>
+                <h2>SALAD</h2>
+                <h3>&#8377 100</h3>
+                <input type="button" value="ORDER">
+            </div>
+            <div class="maincontain">
+                <img src="brownie with ice cream.jpg" class="img">
+                <br>
+                <h2>SALAD</h2>
+                <h3>&#8377 100</h3>
+                <input type="button" value="ORDER">
+            </div>
+        </div>
+    </div>
+    <h2 id="locheading">Locations</h2>
+    <div class="locations">
+        <div class="velachery">
+            <h2>Velachery</h2>
+            <address>
+                5, 3rd Road,</br>
+                Aarana Nagar,</br>
+                Velachery,</br>
+                Chennai - 600042
+            </address>
+        </div>
+        <div class="Tambaram">
+            <h2>Tambaram</h2>
+            <address>
+                145, MIT Road,</br>
+                Tambaram,</br>
+                Chennai - 600045
+            </address>
+
+        </div>
+    </div>      
+    <footer>
+        <div id="copyright">&copy; copyright NATIVE SHORE</div>
+    </footer>
+    <script>
+        function msg(){
+            alert("ADDED TO CART!");
+        }
+    </script>
+</body>
+</html>

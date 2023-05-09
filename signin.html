@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SIGN-UP</title>
+    <link rel="stylesheet" href="signin.css">
+    <script src="signin.js" defer></script>
+    <style>
+        body{
+            background-image: url(sunset.jpg);
+            background-size:cover;
+            background-repeat:no-repeat;
+            margin:0;
+        }
+        h1{
+            margin:10px;
+        }
+        .but:hover{
+            transition: ease-in;
+        }
+        form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+.sinform{
+    margin:auto;
+}
+#reset:hover{
+    background-color: rgb(226, 67, 67);
+}
+.group.error{
+            color:rgb(242, 18, 18);
+            font-size:16px;
+            margin-left: 30px;
+        }
+
+.group.success input{
+            border:3px solid #0cc477;
+        }
+
+.group.error input{
+            border-color:rgb(206, 67, 67);
+}
+@media only screen and (max-width:700px){
+            input{
+                padding: 8px 20px;
+            }
+            label{
+                font-size: 110%;
+            }
+            h1{
+                font-size: 240%;
+            }
+            button{
+                padding: 6px 20px;
+            }
+            #reset{
+                padding: 3px 6px;
+            }
+            #form{
+                width: 90%;
+                margin-top: 80px;
+                margin-left:4% ;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        RANS'47 WEBSITE
+    </h1>
+    <div class="sinform">
+            <div>
+                    <h1>SIGN-UP</h1><br>
+        <form id="form2">            
+        
+        <div class="group">
+            <label for="username"><font class="fom">USERNAME:</font></label>
+            <input type="text" id="userName" name="username"  placeholder="USERNAME..">
+            <div class="error"></div>   
+            <br>
+            <br>
+        </div>
+        <div class="group">
+            <label for="email"><font class="fom" >e-Mail:</font></label>
+            <input type="email" id="userMail" name="email"  placeholder="E-MAIL...">
+            <div class="error"></div>
+            <br>
+            <br>
+        </div>
+        <div class="group">
+            <label for="password"><font class="fom">PASSWORD:</font></label>
+            <input type="password" id="userpsw" name="password" placeholder="PASSWORD..." ><i toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" onclick="viewpass()" id="passview"></i>
+            <div class="error"></div>
+            <br> <br>
+        </div>
+        <div>
+            <center>
+             <button class="but" type="submit" onclick="ok()">REGISTER</button>
+            </center>
+        </div>
+        <br>
+        <div>
+            <center><button id="reset" type="reset" style="height:2em;font-size: 1em;width: 5em;border-radius: 10px;">RESET</button></center>
+        </div>
+        <center style="color:white"><br>Already have an account? &nbsp;<a href="login.html" style="text-decoration: none;color:orange">Log In</a><br></center>
+        </form>
+    </div>
+</div>
+<script>
+    function viewpass(){
+        var passwordinput=document.getElementById("userpsw");
+        var passstatus=document.getElementById("passview");
+        if (passwordinput.type === 'password'){
+                passwordinput.type='text';
+        }
+        else{
+            passwordinput.type="password";
+            passstatus.innerhtml='<i class="fa-solid fa-eye-slash"></i>';
+        }
+}
+</script>
+</script>
+</body>
+</html>

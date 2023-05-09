@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="login2.css">
+    <script src="login.js" type="javascript" ></script>
+    <style>
+        body{
+            background-image: url(38882.png);
+            background-size: cover;
+        }
+        .group.error{
+            color:rgb(242, 18, 18);
+            font-size:16px;
+            margin-left: 30px;
+        }
+
+.group.success input{
+            border:3px solid #0cc477;
+        }
+
+.group.error input{
+            border-color:rgb(206, 67, 67);
+}
+@media only screen and (max-width:700px){
+            input{
+                padding: 8px 20px;
+            }
+            label{
+                font-size: 110%;
+            }
+            h1{
+                font-size: 240%;
+            }
+            button{
+                padding: 6px 20px;
+            }
+            #reset{
+                padding: 3px 6px;
+            }
+            #form{
+                width: 90%;
+                margin-top: 80px;
+                margin-left:4% ;
+
+            }
+        }
+</style>
+</head>
+<body>
+    <h1>LOGIN FORM</h1>
+    <div class="log">
+        <div>
+                <h1>SIGN-UP</h1><br>
+    <form id="form1">
+    <div class="group">
+        <label for="email"><font class="fom" >e-Mail:</font></label>
+        <input type="email" id="userMail" name="email"  placeholder="E-MAIL...">
+        <div class="error"></div>
+        <br>
+        <br>
+    </div>
+    <div class="group">
+        <label for="password"><font class="fom">PASSWORD:</font></label>
+        <input type="password" id="userpsw" name="password" placeholder="PASSWORD..." ><i toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="color:yellow" onclick="viewpass()" id="passview"></i>
+        <div class="error"></div>
+        <br> <br>
+    </div>
+    <div>
+        <center>
+         <button class="but" type="submit" onclick="ok()">LOGIN</button>
+        </center>
+    </div>
+    <br>
+    <div>
+        <center><button id="reset" type="reset" style="height:2em;font-size: 1em;width: 5em;border-radius: 10px;">RESET</button></center>
+    </div>
+    <center style="color:white"><br>Don't have an account? &nbsp;<a href="signin.html" style="text-decoration: none;color:orange">REGISTER</a><br></center>
+    </form>
+</div>
+</div>
+
+        </form>
+    </div>
+    <script>
+        function viewpass(){
+        var passwordinput=document.getElementById("userpsw");
+        var passstatus=document.getElementById("passview");
+        if (passwordinput.type === 'password'){
+                passwordinput.type='text';
+        }
+        else{
+            passwordinput.type="password";
+            passstatus.innerhtml='<i class="fa-solid fa-eye-slash"></i>';
+        }
+}
+    </script>
+
+</body>
+</html>

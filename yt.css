@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content:center;
+
+}
+.navt a{
+    justify-content: center;
+    position:relative;
+    font-size: 1.1em;
+    color:black;
+    text-decoration:wavy;
+    font-weight: 500;
+    margin-left: 40px;
+    text-align: center;
+}
+.res{
+    width: 120px;
+    height:30px;
+    background: transparent;
+    border-radius: 8px;
+    cursor:pointer;
+    font-size: medium;
+    color: aliceblue;
+    transition: 1s;
+    padding-right: 2px;
+    text-align: center;
+
+
+}
+.res:hover{
+    background:#fff;
+    color:black;
+}
+.we{
+    justify-content: center;
+    text-align: center;
+}
+
+.red:hover{
+    cursor: pointer;
+}
+.newton h1{
+    color:rgb(243, 25, 25);
+    background-color: #fff;
+    width: auto;
+}
+.med{
+    color:royalblue;
+    text-align: center;
+    justify-content: center;
+}
+.minec{
+    flex-wrap: wrap;
+    color:gold;
+    text-align: center;
+    padding:20px;
+    background-image: url(default_1.1.1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.minec h3{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+.mine{
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    font-weight: 400;
+}
+@-ms-viewport{
+    width: device-width;
+  }
